@@ -1,0 +1,160 @@
+body {
+  margin: 10px;
+  background-color: #bdd6ee;
+}
+
+.note-display {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #eedbb3;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 2px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  justify-content: stretch;
+  align-content: stretch;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.note-display input {
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.note-display textarea {
+  width: 100%;
+  height: calc(100% - 40px);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.note-display button {
+  grid-column: 2 / 3; /* Position button in the second column */
+  align-self: start; /* Align the button to the top */
+  justify-self: end; /* Align the button to the right */
+  background-color: rgb(80, 132, 180);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.edit-cancel-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-cancel-buttons button:first-of-type{
+  height: 25px;
+}
+
+.edit-cancel-buttons button:first-of-type:hover{
+  background-color: rgb(5, 137, 146);
+}
+
+.edit-cancel-buttons button:last-of-type{
+  height: 25px;
+}
+
+.edit-cancel-buttons button:last-of-type:hover{
+  background-color: rgb(121, 22, 22);
+}
+
+.note-display button:hover {
+  background-color: rgb(5, 137, 146);
+}
+
+.prev-note {
+  display: grid;
+  grid-template-rows: 35px 30px 290px;
+  grid-template-columns: auto 50px 66px;
+  grid-template-areas: 
+    "header edit delete"
+    "date . ."
+    "body . .";
+  min-height: 300px;
+  max-height: 400px;
+  background-color: #dad3b9;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.title {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  font-size: 24px;
+}
+
+.edit-button {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: center;
+  justify-self: end;
+  background-color: rgb(80, 132, 180);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.delete-button {
+  grid-row: 1;
+  grid-column: 3;
+  align-self: center;
+  justify-self: end;
+  background-color: rgb(80, 132, 180);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 60px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.pr-nt-date {
+  grid-row: 2;
+  grid-column: 1;
+  align-self: center;
+  font-size: 16px;
+}
+
+.pr-nt-content {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  font-size: 16px;
+  height: 290px;
+  overflow-y: auto;
+  align-self: center;
+}
+
+.pr-nt-content::-webkit-scrollbar{
+  width: 8px;
+}
+
+.pr-nt-content::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #c4beab;
+}
+
+.pr-nt-content::-webkit-scrollbar-thumb {
+  background: #eedbb3;
+  border-radius: 10px;
+}
+
+.edit-button:hover {
+  background-color: rgb(5, 137, 146);
+}
+
+.delete-button:hover {
+  background-color: rgb(121, 22, 22);
+}
